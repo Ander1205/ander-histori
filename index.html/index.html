@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ander Historias</title>
+</head>
+<body>
+<style>
+body {
+    background-image: url("hack/hacker.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
+h1 {
+    color: yellow;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: bold;
+    text-shadow: 0 0 10px #00d9ff,
+                0 0 25px #00d9ff;
+    animation: moverTitulo 3s ease-in-out infinite alternate;
+}
+@keyframes moverTitulo {
+    from {
+        transform: translateX(-40px);
+    }
+    to {
+        transform: translateX(40px);
+    }
+}
+h2 {
+    color: red;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff15,
+                0 0 25px #00ff37;
+    animation: brillo 3s ease-in-out infinite alternate;
+}
+p {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #e1ff00,
+                0 0 25px #eeff00;
+    animation: brillo 3s ease-in-out infinite alternate;
+}
+@keyframes brillo {
+    from {
+        opacity: 0.75;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.invitacion {
+    color: #00eaff;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: bold;
+    text-shadow: 0 0 8px #00eaff,
+                0 0 20px #8a2be2;
+    animation: invitacionBrillo 1.5s ease-in-out infinite alternate;
+}
+@keyframes invitacionBrillo {
+    from {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+}
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+/* BARRA DE NAVEGACION */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background: rgba(20, 0, 40, 0.85);
+    border: 1px solid #a020f0;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 0 15px #8a2be2;
+}
+nav li {
+    margin: 0;
+}
+/* ENLACES DEL MENU */
+nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.35s ease;
+}
+/* EFECTO NEON AL PASAR EL RATON */
+nav li a:hover {
+    color: #00eaff;
+    background: rgba(0, 234, 255, 0.12);
+    border: 1px solid #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+    box-shadow: 0 0 10px #00eaff,
+                0 0 25px #8a2be2;
+    transform: translateY(-4px);
+}
+/* BOTON DE MUSICA */
+#botonMusica {
+    display: block;
+    margin: 10px auto 20px;
+    padding: 12px 22px;
+    color: #00eaff;
+    background: rgba(10, 0, 30, 0.9);
+    border: 1px solid #00eaff;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00eaff;
+    transition: all 0.3s ease;
+}
+#botonMusica:hover {
+    background: rgba(0, 234, 255, 0.2);
+    box-shadow: 0 0 20px #00eaff;
+    transform: scale(1.05);
+}
+/* AJUSTES PARA CELULARES */
+@media (max-width: 600px) {
+    header {
+        margin: 8px;
+        padding: 12px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    nav li a {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+</style>
+    <header>
+        <!-- REPRODUCTOR DE MUSICA -->
+        <audio id="musicaFondo" loop>
+            <source src="musica/mixkit-pondering-383.mp3"
+                    type="audio/mpeg">
+        </audio>
+        <button id="botonMusica" type="button">
+            🎵 Activar música
+        </button>
+         <h1 class="titulo-animado">
+            Ander Historias
+        </h1>
+        <h2>Donde las palabras cobran vida.</h2>
+        <p>Bienvenido a un mundo donde la literatura se encuentra
+            con la imaginación. Aquí, cada historia es una aventura,
+            cada imagen es una ventana a otros mundos y cada palabra
+            guarda una emoción.
+
+            Sumérgete en relatos llenos de misterio, amor, acción y
+            fantasía, donde las imágenes dan vida a los personajes y
+            las palabras te hacen sentir parte de cada escena.
+
+            Lee, imagina, siente y viaja más allá de las páginas.
+            Porque las mejores historias no solo se leen… se viven.
+ </p>
+<p class="invitacion">
+            ✨ ¡Dale click a una historia! ✨</p>
+<!-- MENU DE HISTORIAS -->
+        <nav>
+            <ul>
+                <li><a href="El comienzo.html">El comienzo</a></li>
+<li><a href="Conflicto.html">El conflicto</a></li>
+<li><a href="Hultimo.html">
+                    Hultimo ser humano
+                </a></li> 
+
+<li><a href="La%20ultima%20batalla.html">
+                    La ultima batalla
+                </a></li>
+ <li><a href="historia%20T20.html">
+                    Historia de T20
+                </a></li>
+<li><a href="Albino.html">Albino</a></li>
+            </ul>
+        </nav>
+    </header>
+    </nav>
+</header>
+
+<script>
+    const musica = document.getElementById("musicaFondo");
+    const boton = document.getElementById("botonMusica");
+
+    musica.volume = 0.2;
+
+    boton.addEventListener("click", async function () {
+        try {
+            if (musica.paused) {
+                await musica.play();
+                boton.textContent = "⏸ Pausar música";
+            } else {
+                musica.pause();
+                boton.textContent = "🎵 Activar música";
+            }
+        } catch (error) {
+            console.error("Error al reproducir:", error);
+            alert("No se pudo reproducir. Revisa la ubicación del archivo MP3.");
+        }
+    });
+</script>
+</body>
+</html>

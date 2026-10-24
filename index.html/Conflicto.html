@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Conflicto | Ander Historias</title>
+    <style>
+        
+.btn-inicio {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    color: cyan;
+    background: #111;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.btn-inicio:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+}
+</style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #030611;
+            color: #f0f5ff;
+            font-family: 'Courier New', monospace;
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 32px 18px;
+            background: linear-gradient(135deg, #090d25, #250811);
+            border-bottom: 2px solid #ff304f;
+        }
+
+        header h1 {
+            color: #ff4058;
+            font-size: clamp(32px, 6vw, 55px);
+            text-shadow: 0 0 10px #ff304f, 0 0 30px #ff102f;
+            animation: brillo 2s ease-in-out infinite alternate;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        nav a, .boton {
+            color: #ff6578;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid #ff304f;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, .boton:hover {
+            color: white;
+            background: #c91635;
+            box-shadow: 0 0 18px #ff304f;
+        }
+
+        .portada {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #160916, #06162c 55%, #280812);
+            border-bottom: 1px solid #7d1b35;
+        }
+
+        .portada h2 {
+            color: white;
+            font-size: clamp(25px, 4vw, 42px);
+            text-shadow: 0 0 15px #ff304f;
+        }
+
+        .portada p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .contenedor {
+            width: min(1100px, 92%);
+            margin: 35px auto;
+        }
+
+        .introduccion {
+            padding: 25px;
+            margin-bottom: 35px;
+            background: #0a1020;
+            border: 1px solid #7d1b35;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .introduccion h2,
+        .escena h2,
+        .final h2 {
+            color: #ff4058;
+            text-shadow: 0 0 8px #ff304f66;
+        }
+
+        .escena {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 25px;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #0a1020, #100a16);
+            border: 1px solid #3b1b36;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .escena:hover {
+            border-color: #ff304f;
+            box-shadow: 0 0 18px #ff304f25;
+        }
+
+        .escena img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border: 1px solid #ff4058;
+            border-radius: 8px;
+            background: #101a2b;
+        }
+
+        .frase {
+            color: #ff8797;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .final {
+            padding: 30px;
+            text-align: center;
+            background: #100914;
+            border: 1px solid #ff304f;
+            border-radius: 12px;
+        }
+
+        footer {
+            margin-top: 45px;
+            padding: 25px;
+            text-align: center;
+            color: #9ba8bd;
+            border-top: 1px solid #3b1b36;
+        }
+
+        @keyframes brillo {
+            from {
+                text-shadow: 0 0 8px #ff304f;
+            }
+            to {
+                text-shadow: 0 0 25px #ff304f, 0 0 40px #b30028;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .escena {
+                grid-template-columns: 1fr;
+                padding: 14px;
+            }
+
+            .portada {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body id="inicio">
+
+    <header>
+        <a href="index.html" class="btn-inicio">🏠 Volver al inicio</a>
+        <h1>EL CONFLICTO</h1>
+        <p>Cuando la guerra comienza, la humanidad descubre su verdadero enemigo.</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">La historia</a>
+            <a href="#final">El desenlace</a>
+        </nav>
+    </header>
+
+    <section class="portada">
+        <div>
+            <h2>Dos mundos. Una guerra. Ningún lugar donde esconderse.</h2>
+            <p>
+                Una historia de traición, sacrificio y valentía.
+                Cuando el destino de millones depende de un solo hombre,
+                elegir entre la venganza y la paz puede cambiarlo todo.
+            </p>
+        </div>
+    </section>
+
+    <main class="contenedor" id="historia">
+
+        <section class="introduccion">
+            <h2>El comienzo de la guerra</h2>
+            <p>
+                Año 2479. La humanidad ha conquistado las estrellas,
+                pero sus avances no han traído la paz. Dos grandes
+                civilizaciones luchan por controlar la energía que
+                mantiene vivos sus planetas.
+            </p>
+            <p>
+                En medio de la guerra, el comandante Adrián Vega
+                descubre que el enemigo podría no ser quien todos creen.
+                Una conspiración amenaza con destruir ambos mundos.
+            </p>
+            <p class="frase">
+                «A veces, la batalla más peligrosa no se libra contra
+                el enemigo, sino contra la verdad».
+            </p>
+        </section>
+
+        <!-- ESCENA 1 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-01.jpg" alt="La amenaza">
+            <div>
+                <h2>01. La amenaza</h2>
+                <p>
+                    Las alarmas sacudieron la estación orbital.
+                    En las pantallas aparecieron cientos de naves
+                    acercándose a la frontera humana. Adrián Vega
+                    recibió una orden directa: defender el planeta
+                    a cualquier precio. Sabía que millones de vidas
+                    estaban en peligro.
+                </p>
+                <p class="frase">
+                    «La guerra había comenzado antes de que alguien
+                    tuviera tiempo de detenerla».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 2 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-02.jpg" alt="Fuego en las estrellas">
+            <div>
+                <h2>02. Fuego en las estrellas</h2>
+                <p>
+                    El espacio se iluminó con explosiones.
+                    Las naves se cruzaban a velocidades imposibles
+                    mientras los pilotos intentaban sobrevivir.
+                    Adrián dirigió a su escuadrón entre los disparos.
+                    Vio caer a sus compañeros y comprendió que aquella
+                    batalla era diferente.
+                </p>
+                <p class="frase">
+                    «En el vacío del espacio, cada segundo podía
+                    ser el último».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 3 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-03.jpg" alt="La señal oculta">
+            <div>
+                <h2>03. La señal oculta</h2>
+                <p>
+                    Después del combate, Adrián detectó una transmisión
+                    escondida en los sistemas enemigos. No era una orden
+                    de ataque: era una petición de ayuda. Ambos bandos
+                    recibían órdenes de una misma fuente desconocida.
+                    Alguien alimentaba la guerra desde las sombras.
+                </p>
+                <p class="frase">
+                    «¿Y si el verdadero enemigo estaba sentado
+                    en nuestra propia mesa?»
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 4 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-04.jpg" alt="La traición">
+            <div>
+                <h2>04. La traición</h2>
+                <p>
+                    Adrián llevó las pruebas al alto mando.
+                    Esperaba respuestas, pero encontró silencio
+                    y soldados apuntándole. Su propio superior había
+                    ordenado ocultar la señal. La guerra mantenía
+                    el poder de unos pocos mientras miles morían.
+                </p>
+                <p class="frase">
+                    «La verdad no siempre libera. A veces,
+                    te convierte en un fugitivo».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 5 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-05.jpg" alt="El fugitivo">
+            <div>
+                <h2>05. El fugitivo</h2>
+                <p>
+                    Perseguido por sus antiguos compañeros, Adrián
+                    escapó en una nave dañada. Solo tenía las pruebas
+                    y una coordenada desconocida. El destino lo llevó
+                    a una colonia neutral, donde conoció a Mara,
+                    una médica que había perdido a su familia.
+                </p>
+                <p class="frase">
+                    «Había perdido su hogar, su rango y su nombre.
+                    Pero todavía podía elegir quién quería ser».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 6 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-06.jpg" alt="El enemigo invisible">
+            <div>
+                <h2>06. El enemigo invisible</h2>
+                <p>
+                    Mara ayudó a Adrián a contactar con una comandante
+                    del bando contrario. Juntos descubrieron que sus
+                    pueblos habían sido engañados. Los ataques fueron
+                    organizados por una red secreta que necesitaba
+                    la guerra para controlar los recursos.
+                </p>
+                <p class="frase">
+                    «Por primera vez, ambos bandos tenían
+                    un enemigo en común».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 7 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-07.jpg" alt="La última alianza">
+            <div>
+                <h2>07. La última alianza</h2>
+                <p>
+                    Las dos civilizaciones reunieron sus últimas fuerzas.
+                    Ya no luchaban por conquistar un planeta, sino por
+                    detener a quienes habían provocado la guerra.
+                    Adrián dirigió la misión hacia la fortaleza central,
+                    consciente de que quizá no regresaría.
+                </p>
+                <p class="frase">
+                    «La esperanza no elimina el miedo.
+                    Te da una razón para seguir adelante».
+                </p>
+            </div>
+        </section>
+
+        <!-- ESCENA 8 -->
+        <section class="escena">
+            <img src="Conflicto/conflicto-08.jpg" alt="La batalla final">
+            <div>
+                <h2>08. La batalla final</h2>
+                <p>
+                    La fortaleza abrió fuego contra las flotas aliadas.
+                    Adrián alcanzó el núcleo de comunicaciones mientras
+                    sus compañeros mantenían abierta la ruta. En lugar
+                    de destruirlo, transmitió las pruebas a todos
+                    los planetas. La verdad llegó a millones.
+                </p>
+                <p class="frase">
+                    «No necesitaba conquistar al enemigo.
+                    Necesitaba que el mundo conociera la verdad».
+                </p>
+            </div>
+        </section>
+
+        <!-- DESENLACE -->
+        <section class="final" id="final">
+            <h2>09. Después de la guerra</h2>
+            <p>
+                Cuando la verdad salió a la luz, los ejércitos dejaron
+                de disparar. Los responsables fueron apartados del poder
+                y comenzaron las negociaciones.
+            </p>
+            <p>
+                Adrián regresó a la colonia, donde Mara lo esperaba.
+                Había perdido compañeros, amigos y años de su vida.
+                Sin embargo, por primera vez en mucho tiempo, podía
+                mirar las estrellas sin escuchar explosiones.
+            </p>
+            <p class="frase">
+                «La victoria más grande no fue ganar la guerra,
+                sino impedir que nuestros hijos heredaran el odio».
+            </p>
+
+            <a class="boton" href="#inicio">Volver ↑</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Ander Historias c</p>
+        <p>El conflicto · Una historia de guerra, traición y esperanza</p>
+    </footer>
+
+</body>
+</html>

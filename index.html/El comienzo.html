@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Comienzo | Ander Historias</title>    
+<style>
+.btn-inicio {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    color: cyan;
+    background: #111;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.btn-inicio:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+}
+</style>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #030713;
+    color: #eaf4ff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    text-align: center;
+    padding: 42px 18px;
+    background: radial-gradient(circle at top, #132d52, #050711 70%);
+    border-bottom: 1px solid #00cfff;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    margin: 0;
+    color: #55e6ff;
+    text-shadow: 0 0 12px #00bfff, 0 0 32px #0077ff;
+    letter-spacing: 4px;
+    animation: brillo 2s infinite alternate;
+}
+
+header p {
+    color: #c5e9ff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+nav a, .toplink {
+    color: #67eaff;
+    text-decoration: none;
+    border: 1px solid #00bfff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+nav a:hover, .toplink:hover {
+    background: #007ea8;
+    color: white;
+    box-shadow: 0 0 16px #00bfff;
+}
+
+.hero {
+    padding: 55px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #071327, #102c43, #170f2c);
+}
+
+.hero h2 {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    color: white;
+    text-shadow: 0 0 15px #00bfff;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    color: #c7d8ed;
+}
+
+main {
+    width: min(1120px, 92%);
+    margin: 35px auto;
+}
+
+.intro, .scene, .ending {
+    background: linear-gradient(135deg, #0a1427, #0a0d1b);
+    border: 1px solid #173f5e;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 24px 0;
+    box-shadow: 0 0 20px #001a2a;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2, .scene h2, .ending h2 {
+    color: #55e6ff;
+    text-shadow: 0 0 10px #008cff;
+}
+
+.scene {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.scene:hover {
+    border-color: #00cfff;
+    box-shadow: 0 0 24px #00aaff33;
+    transform: translateY(-3px);
+}
+
+.scene img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 9px;
+    border: 1px solid #00bfff;
+    background: #081120;
+}
+
+.scene p {
+    margin: 0.6rem 0;
+}
+
+.quote {
+    font-style: italic;
+    color: #70eaff;
+}
+
+.ending {
+    text-align: center;
+    padding: 35px;
+}
+
+.ending .quote {
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #16344e;
+    color: #91a9c0;
+}
+
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 8px #00bfff;
+    }
+    to {
+        text-shadow: 0 0 25px #00bfff, 0 0 40px #0077ff;
+    }
+}
+
+@media (max-width: 720px) {
+    .scene {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+}
+</style>
+</head>
+
+<body id="inicio">
+
+<header>
+    <a href="index.html" class="btn-inicio">🏠 Volver al inicio</a>
+    <h1>EL COMIENZO</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">La historia</a>
+        <a href="#final">Desenlace</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Todo gran final comienza con una decisión</h2>
+    <p>
+        El capitán César y la tripulación de la nave Aurora
+        descubrirán que una misión entre las estrellas puede
+        convertirse en el comienzo de algo mucho más grande.
+    </p>
+</section>
+
+<main id="historia">
+
+<section class="intro">
+    <h2>Una señal al otro lado de las estrellas</h2>
+    <p>
+        La humanidad llevaba generaciones explorando el universo.
+        Pero cuando la Aurora detectó un planeta que no aparecía
+        en ningún mapa, César comprendió que su tripulación estaba
+        a punto de encontrar un secreto capaz de cambiar el destino
+        de muchos mundos.
+    </p>
+    <p class="quote">
+        «A veces, lo desconocido no viene a destruirnos;
+        viene a preguntarnos quiénes queremos ser».
+    </p>
+</section>
+
+<section class="scene">
+    <img src="COMIENZO/comienzo-01.jpg" alt="El capitán César recibe una misión">
+    <div>
+        <h2>01. La decisión</h2>
+        <p>
+            En una galaxia que parecía haberlo conquistado todo,
+            el capitán César recibió una misión que podía cambiar
+            el destino de la humanidad.
+        </p>
+        <p class="quote">«Lo que está perdido todavía puede encontrar un camino».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-02.jpg" alt="El planeta olvidado">
+    <div>
+        <h2>02. El planeta olvidado</h2>
+        <p>
+            Más allá de las rutas conocidas, la tripulación de la
+            Aurora encontró un planeta cubierto de vida y ruinas antiguas.
+        </p>
+        <p class="quote">«No era un simple descubrimiento: era un destino».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-03.jpg" alt="La llegada de la Aurora">
+    <div>
+        <h2>03. La llegada de la Aurora</h2>
+        <p>
+            La nave descendió entre montañas imposibles y ciudades
+            silenciosas. César sintió que aquel lugar guardaba
+            una historia que nadie debía ignorar.
+        </p>
+        <p class="quote">«Las estrellas guardan secretos para quienes se atreven a mirar».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-04.jpg" alt="Una señal desconocida">
+    <div>
+        <h2>04. La señal</h2>
+        <p>
+            Una señal desconocida apareció en los sistemas.
+            No era una llamada de auxilio común: parecía venir
+            de algo que llevaba siglos esperando.
+        </p>
+        <p class="quote">«No todo lo que brilla en el espacio es una bendición».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-05.jpg" alt="El secreto bajo la superficie">
+    <div>
+        <h2>05. El secreto bajo la superficie</h2>
+        <p>
+            Bajo el planeta, la tripulación descubrió una tecnología
+            ancestral capaz de sanar mundos… o destruirlos.
+        </p>
+        <p class="quote">«El pasado nunca desaparece; solo espera».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-06.jpg" alt="La traición dentro de la expedición">
+    <div>
+        <h2>06. La traición</h2>
+        <p>
+            Alguien de la expedición filtró las coordenadas.
+            De pronto, la misión científica se convirtió
+            en una lucha por sobrevivir.
+        </p>
+        <p class="quote">«La mayor amenaza no siempre viene del exterior».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-07.jpg" alt="La nave Aurora escapa">
+    <div>
+        <h2>07. La huida</h2>
+        <p>
+            La Aurora escapó bajo fuego enemigo. Con daños en el casco
+            y sin refuerzos, César tuvo que confiar en su tripulación.
+        </p>
+        <p class="quote">«La libertad no es un lugar: es una decisión».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-08.jpg" alt="Lyra, la aliada inesperada">
+    <div>
+        <h2>08. La aliada inesperada</h2>
+        <p>
+            En los bosques luminosos conocieron a Lyra, una habitante
+            del planeta que conocía el verdadero propósito de la tecnología.
+        </p>
+        <p class="quote">«No todos los que habitan este mundo son enemigos».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-09.jpg" alt="La batalla por la fuente de vida">
+    <div>
+        <h2>09. La batalla</h2>
+        <p>
+            Una flota enemiga llegó para apoderarse de la fuente de vida.
+            La Aurora y los defensores del planeta se prepararon para resistir.
+        </p>
+        <p class="quote">«No se trata de ser el más fuerte, sino de no rendirse».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-10.jpg" alt="El sacrificio del capitán César">
+    <div>
+        <h2>10. El sacrificio</h2>
+        <p>
+            César tuvo que tomar una decisión dolorosa para proteger
+            a sus compañeros y evitar que la fuente cayera
+            en manos equivocadas.
+        </p>
+        <p class="quote">«A veces, el mayor acto de amor es proteger el mañana».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-11.jpg" alt="El renacer del planeta">
+    <div>
+        <h2>11. El renacer</h2>
+        <p>
+            Tras la batalla, el planeta comenzó a sanar.
+            Los supervivientes entendieron que su alianza
+            podía cambiar el futuro de muchas civilizaciones.
+        </p>
+        <p class="quote">«Algunos viajes no terminan: se transforman».</p>
+    </div>
+</section>
+
+<section class="scene">
+    <img src="comienzo/comienzo-12.jpg" alt="El futuro de César y Lyra">
+    <div>
+        <h2>12. El futuro</h2>
+        <p>
+            César y Lyra eligieron proteger aquel mundo.
+            La misión que empezó como una exploración
+            se convirtió en una promesa de esperanza.
+        </p>
+        <p class="quote">«El verdadero futuro se construye juntos».</p>
+    </div>
+</section>
+
+<section class="ending" id="final">
+    <h2>El comienzo de un nuevo futuro</h2>
+    <p>
+        Cuando el polvo de la batalla se disipó, el planeta dejó
+        de ser un misterio y se convirtió en un hogar que debía
+        protegerse. César, Lyra y la tripulación de la Aurora
+        regresaron distintos: habían descubierto que el mayor poder
+        no era una tecnología ancestral, sino la decisión de cuidar la vida.
+    </p>
+    <p class="quote">
+        «El futuro no está escrito en las estrellas.
+        Se construye con cada decisión que tomamos».
+    </p>
+    <a class="toplink" href="#inicio">Volver ↑</a>
+</section>
+
+</main>
+
+<footer>
+    <p>Ander Historias· El Comienzo</p>
+</footer>
+
+</body>
+</html>

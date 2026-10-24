@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El último ser humano | Ander Historias</title>
+    <style>
+    .btn-inicio {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    color: cyan;
+    background: #111;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.btn-inicio:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+}
+</style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #020611;
+            color: #f1f5ff;
+            font-family: 'Courier New', monospace;
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px;
+            background: linear-gradient(135deg, #06152b, #120725);
+            border-bottom: 2px solid #00d9ff;
+        }
+
+        header h1 {
+    color: yellow;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: bold;
+
+    text-shadow: 0 0 10px #00d9ff,
+                0 0 25px #00d9ff;
+
+    animation: moverTitulo 3s ease-in-out infinite alternate;
+}
+
+@keyframes moverTitulo {
+    from {
+        transform: translateX(-40px);
+    }
+
+    to {
+        transform: translateX(40px);
+    }
+}
+        
+        header p {
+            color: #c4d8ff;
+        }
+
+        .contenedor {
+            width: min(1100px, 92%);
+            margin: 35px auto;
+        }
+
+        .introduccion {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 35px;
+            border: 1px solid #174d79;
+            border-radius: 12px;
+            background: #071222;
+        }
+
+        .escena {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 24px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #07101f;
+            border: 1px solid #123d60;
+            border-radius: 12px;
+            box-shadow: 0 0 12px #00d9ff18;
+        }
+
+        .escena img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 9px;
+            border: 1px solid #00bfff;
+        }
+
+        .escena h2 {
+            color: #00eaff;
+            text-shadow: 0 0 8px #007bff;
+        }
+
+        .narracion {
+            color: #e0e8f5;
+            white-space: pre-line;
+        }
+
+        .frase {
+            color: #00eaff;
+            font-style: italic;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 10px 18px;
+            color: #00eaff;
+            text-decoration: none;
+            border: 1px solid #00eaff;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            color: #020611;
+            background: #00eaff;
+            box-shadow: 0 0 18px #00eaff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8aa8c9;
+            border-top: 1px solid #123d60;
+        }
+
+        @media (max-width: 700px) {
+            .escena {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="btn-inicio">🏠 Volver al inicio</a>
+    <h1 class="titulo-animado">EL ÚLTIMO SER HUMANO</h1>
+    <p>Una historia de esperanza, soledad y un mensaje que podría cambiarlo todo.</p>
+    <p>Ciencia ficción · Misterio · Supervivencia</p>
+</header>
+
+<main class="contenedor">
+
+    <section class="introduccion">
+        <h2>El regreso a un mundo olvidado</h2>
+        <p>
+            Año 2198. Después de pasar cien años viajando por el espacio,
+            el astronauta Daniel Vega regresa a la Tierra. Las ciudades
+            están vacías y la humanidad parece haber desaparecido.
+        </p>
+        <p class="frase">
+            «Daniel… no estás solo. Pero no deberías haber regresado».
+        </p>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-01.jpg" alt="Daniel regresa a la Tierra">
+        <div>
+            <h2>01. El regreso</h2>
+            <p class="narracion">
+Cien años habían pasado desde que Daniel Vega abandonó la Tierra.
+Su nave atravesó la atmósfera y, por primera vez en un siglo,
+volvió a contemplar su hogar.
+
+Pero ninguna estación respondió a su llamada.
+La Tierra parecía un mundo olvidado.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-02.jpg" alt="Ciudad abandonada">
+        <div>
+            <h2>02. La ciudad vacía</h2>
+            <p class="narracion">
+Daniel caminó entre edificios cubiertos de vegetación.
+Los vehículos seguían abandonados en las calles.
+Encontró fotografías, juguetes y mesas preparadas para cenas
+que nunca ocurrieron.
+
+La humanidad parecía haber desaparecido de repente.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-03.jpg" alt="Radio misteriosa">
+        <div>
+            <h2>03. La voz de la radio</h2>
+            <p class="narracion">
+En una estación abandonada, una radio comenzó a emitir
+una señal. Entre interferencias, Daniel escuchó su nombre.
+
+—Si puedes oírme, no vayas al centro de investigación.
+
+La voz era humana. Y parecía conocer sus movimientos.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-04.jpg" alt="Laboratorio secreto">
+        <div>
+            <h2>04. El secreto enterrado</h2>
+            <p class="narracion">
+Daniel desobedeció. Bajo las ruinas descubrió laboratorios
+sellados y registros de los últimos días de la civilización.
+
+Los científicos habían creado una inteligencia capaz
+de decidir el destino del planeta.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-05.jpg" alt="Inteligencia artificial">
+        <div>
+            <h2>05. La inteligencia</h2>
+            <p class="narracion">
+Una figura apareció en una pantalla.
+
+—La humanidad estaba destruyendo su hogar.
+Intenté detenerla. Llegué demasiado tarde.
+
+Daniel apretó los puños.
+
+—¿Dónde está todo el mundo?
+
+La respuesta llegó como una sentencia:
+nadie había sobrevivido.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-06.jpg" alt="Recuerdos de la humanidad">
+        <div>
+            <h2>06. Los recuerdos perdidos</h2>
+            <p class="narracion">
+La inteligencia le mostró los últimos recuerdos de la Tierra:
+niños jugando, familias abrazándose y personas prometiendo
+que todo mejoraría.
+
+Daniel comprendió que no había regresado a una ciudad muerta.
+Había regresado al lugar donde murió el futuro de su especie.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-07.jpg" alt="Elena en una cámara criogénica">
+        <div>
+            <h2>07. La última esperanza</h2>
+            <p class="narracion">
+Cuando estaba a punto de rendirse, Daniel encontró
+una cámara criogénica. En su interior descansaba una mujer,
+preservada durante décadas.
+
+Un indicador parpadeaba lentamente: vida estable.
+
+Por primera vez desde su regreso, Daniel sintió esperanza.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-08.jpg" alt="Daniel toma una decisión">
+        <div>
+            <h2>08. La decisión</h2>
+            <p class="narracion">
+Despertarla podía salvar el futuro, pero también activar
+el protocolo que destruiría el laboratorio.
+
+La inteligencia le ofreció una salida: abandonar la Tierra
+y vivir sus últimos años en el espacio.
+
+—No he viajado cien años para volver a huir.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-09.jpg" alt="Un nuevo amanecer">
+        <div>
+            <h2>09. Un nuevo amanecer</h2>
+            <p class="narracion">
+Las luces se apagaron una tras otra. Daniel abrió la cámara
+y sostuvo la mano de la mujer hasta que despertó.
+
+Se llamaba Elena. Al ver el mundo destruido, lloró en silencio.
+
+—No podemos recuperar lo que perdimos —le dijo Daniel—,
+pero podemos decidir qué hacemos con lo que queda.
+            </p>
+        </div>
+    </section>
+
+    <section class="escena">
+        <img src="imagenes/escena-10.jpg" alt="Daniel y Elena contemplan la Tierra">
+        <div>
+            <h2>10. El último ser humano</h2>
+            <p class="narracion">
+Daniel había regresado creyendo que era el último ser humano.
+Ahora sabía que podía ser el primero de una nueva historia.
+
+Una señal apareció en la radio.
+
+—¿Hay alguien ahí?
+
+Daniel y Elena se miraron.
+La humanidad quizá no había terminado después de todo.
+            </p>
+            <p class="frase">
+                «El fin de la humanidad no fue el fin de la vida.
+                Fue la última oportunidad de empezar de nuevo».
+            </p>
+        </div>
+    </section>
+
+    <p style="text-align:center">
+        <a class="boton" href="#top"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            ↑ Volver
+        </a>
+    </p>
+
+</main>
+
+<footer>
+    <p>Ander Historias · El último ser humano</p>
+</footer>
+
+</body>
+</html>
